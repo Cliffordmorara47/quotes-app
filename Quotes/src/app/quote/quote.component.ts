@@ -15,6 +15,9 @@ export class QuoteComponent implements OnInit {
     new Quote(2, "Encouragement", "I would rather die on my feet than live on my knees", "Nelson Mandela", 0, 0),
     new Quote(3, "Heed", "The world is a place that has a great risks and fairly great opportunities", "George Bush", 0, 0) 
   ]
+  upvotes = 0;
+  downVotes = 0;
+
 
   // addNewQuote(Quote: any){
   //   let QuoteLength = this.Quotes.length;
