@@ -28,7 +28,7 @@ export class QuoteComponent implements OnInit {
   }
   deleteQuote(isComplete: any, index:any) {
     if (isComplete) {
-      let toDelete = confirm(`Confirm deletion of quote by ${this.Quotes[index].author}?`)
+      let toDelete = confirm(`Confirm deletion of quote by ${this.Quotes[index].author}!!`)
 
       if (toDelete) {
         this.Quotes.splice(index, 1)
