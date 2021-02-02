@@ -1,14 +1,14 @@
 <div class="container-fluid">
     <h2 class="text-center">Create Your Own Quote!!</h2>
     <hr>
-    <form>
+    <form #quoteForm='ngForm'>
         <div class="form-group">
             <label for="category">Category</label>
-            <input type="text" class="form-control" id="category" required>
+            <input type="text" class="form-control" id="category" [(ngModel)]="newQuote.name" name="name" required>
         </div>
         <div class="form-group">
             <label for="quote">Quote</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
+            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.quote" required></textarea>
         </div>
         <div class="form-group">
             <label for="author">Author</label>
