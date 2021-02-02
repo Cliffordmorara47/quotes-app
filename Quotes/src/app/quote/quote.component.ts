@@ -15,9 +15,17 @@ export class QuoteComponent implements OnInit {
     new Quote(2, "Encouragement", "I would rather die on my feet than live on my knees", "Nelson Mandela", 0, 0),
     new Quote(3, "Heed", "The world is a place that has a great risks and fairly great opportunities", "George Bush", 0, 0) 
   ]
-  deleteQuote(isComplete: any, index:any) {
-    if (isComplete) {
-      let toDelete = confirm(`Confirm deletion ${this.Quotes[index].name}?`)
+
+  // addNewQuote(Quote: any){
+  //   let QuoteLength = this.Quotes.length;
+  //   Quote.id = QuoteLength+1;
+  //   goal.completeDate = new Date(goal.completeDate)
+  //   this.goals.push(goal)
+  // }
+
+   deleteQuote(isExpired: any, index:any) {
+     if (isExpired) {
+       let toDelete = confirm(`Confirm deletion of ${this.Quotes[index].name}?`)
 
       if (toDelete) {
         this.Quotes.splice(index, 1)

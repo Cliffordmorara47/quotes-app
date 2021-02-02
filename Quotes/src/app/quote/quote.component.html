@@ -5,16 +5,6 @@
         background-color: aqua;
     }
 
-    .btn {
-        width: 25%;
-    }
-
-    .myBtn {
-        padding-left: 0px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
     .card {
         width: 100%;
         padding-top: 20px;
@@ -59,7 +49,7 @@
                     <div class="card">
                         <h4>{{Quote.name}}</h4>
                         <p>{{Quote.quote}}</p>
-                        <app-quote-details  (isExpired)='deleteQuote($event,i)'></app-quote-details>
+                        <app-quote-details *ngIf='Quote.showDetails' [Quote]='Quote'></app-quote-details>
                     </div>
                 </div>
             </div>

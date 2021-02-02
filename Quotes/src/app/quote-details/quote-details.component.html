@@ -1,17 +1,24 @@
 <style>
-        .btn-info{
-        width: 13%;
+    .btn-info {
+        width: 12%;
         font-size: 10px;
-        padding: 5px;
+        padding: 0px;
     }
-    .images{
+
+    .images {
         padding-top: 20px;
     }
+    .btn-danger {
+        width: 25%;
+    }
+
+    .myBtn {
+        padding-left: 0px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 </style>
-<div *ngIf='Quote'>
-    <!-- <p>{{Quote.name}}</p> -->
-  </div>
-  <div class="images">
+<div class="images">
     <a href="#" class="btn btn-info btn-lg">
         <span class="glyphicon glyphicon-thumbs-up"></span> Like
     </a>
@@ -19,6 +26,7 @@
         <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
     </a>
 </div>
-  <div class="myBtn">
-    <button class="btn btn-danger">Delete Quote</button>
+<!-- *ngIf='Quote.showDetails' [Quote]='Quote' (isExpired)='deleteQuote($event,i)' -->
+<div class="myBtn">
+    <button class="btn btn-danger" (click)='QuoteDelete(true)'>Delete Quote</button>
 </div>
