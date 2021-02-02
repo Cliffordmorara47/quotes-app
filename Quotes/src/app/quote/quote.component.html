@@ -7,7 +7,7 @@
         page</p>
     <div class="row">
         <div class="col-md-6">
-            <div *ngFor='let Quote of Quotes'>
+            <div *ngFor='let Quote of Quotes;let i = index'>
                 <div id="card">
                     <div class="card">
                         <h4>{{Quote.name}}</h4>
@@ -24,7 +24,7 @@
                             <span class="pr-5">{{ Quote.downVotes }}</span>
                         </div>
                         <div class="myBtn">
-                            <!-- <button class="btn btn-danger" (click)="deleteQuote($event, mIndex)">Delete Quote</button> -->
+                            <button class="btn btn-danger" (click)="deleteQuote($event, i)">Delete Quote</button>
                         </div>
                         <!--  *ngIf='Quote.showDetails' [Quote]='Quote' -->
                     </div>
