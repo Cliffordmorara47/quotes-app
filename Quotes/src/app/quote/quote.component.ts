@@ -18,24 +18,23 @@ export class QuoteComponent implements OnInit {
   upvotes = 0;
   downVotes = 0;
 
+  upVote(quote:any) {
+    quote.upVotes = quote.upVotes + 1;
 
-  // addNewQuote(Quote: any){
-  //   let QuoteLength = this.Quotes.length;
-  //   Quote.id = QuoteLength+1;
-  //   goal.completeDate = new Date(goal.completeDate)
-  //   this.goals.push(goal)
-  // }
-
-   deleteQuote(isExpired: any, index:any) {
-     if (isExpired) {
-       let toDelete = confirm(`Confirm deletion of ${this.Quotes[index].name}?`)
-
-      if (toDelete) {
-        this.Quotes.splice(index, 1)
-      }
-    }
   }
+  downVote(quote:any) {
+    quote.downVotes = quote.downVotes + 1;
 
+  }
+  // deleteQuote(isComplete: any, index:any) {
+  //   if (isComplete) {
+  //     let toDelete = confirm(`Confirm deletion of ${this.Quotes[index].quote}?`)
+
+  //     if (toDelete) {
+  //       this.Quotes.splice(index, 1)
+  //     }
+  //   }
+  // }
 
   constructor() { }
 
