@@ -8,14 +8,14 @@ import { Quote } from '../quote'
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  @Input()
-  Quote?: Quote;
-  @Output()
-  isExpired = new EventEmitter<boolean>();
+  // @Input()
+  // Quote?: Quote;
+  // @Output()
+  // isExpired = new EventEmitter<boolean>();
 
-  QuoteDelete(complete: boolean) {
-    this.isExpired.emit(complete);
-  }
+  // QuoteDelete(complete: boolean) {
+  //   this.isExpired.emit(complete);
+  // }
 
   constructor() { }
 
