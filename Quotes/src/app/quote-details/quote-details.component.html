@@ -1,1 +1,24 @@
-<p>quote-details works!</p>
+<style>
+        .btn-info{
+        width: 13%;
+        font-size: 10px;
+        padding: 5px;
+    }
+    .images{
+        padding-top: 20px;
+    }
+</style>
+<div *ngIf='Quote'>
+    <!-- <p>{{Quote.name}}</p> -->
+  </div>
+  <div class="images">
+    <a href="#" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-thumbs-up"></span> Like
+    </a>
+    <a href="#" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+    </a>
+</div>
+  <div class="myBtn">
+    <button class="btn btn-danger">Delete Quote</button>
+</div>

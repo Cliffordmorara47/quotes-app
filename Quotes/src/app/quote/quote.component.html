@@ -6,7 +6,7 @@
     }
 
     .btn {
-        width: 12%;
+        width: 25%;
     }
 
     .myBtn {
@@ -27,18 +27,22 @@
     .intro:hover {
         color: rgb(53, 224, 31);
     }
-    #card{
+
+    #card {
         padding-top: 20px;
     }
-    .card{
+
+    .card {
         background-color: aquamarine;
         padding-left: 30px
     }
-    .card h4{
+
+    .card h4 {
         padding-bottom: 20px;
     }
-    .card small{
-         color: rgb(247, 1, 34);
+
+    .card small {
+        color: rgb(247, 1, 34);
     }
 </style>
 <div class="container-fluid">
@@ -48,16 +52,20 @@
 <div class="container">
     <p class="intro">View some of the top quotes collection <br>Feel free to quote your own quote and post it in the
         page</p>
-    <div *ngFor='let Quote of Quotes'>
-        <div id="card">
-            <div class="card">
-                <h4>{{Quote.name}}</h4>
-                <p>{{Quote.quote}}</p>
-                <small>{{Quote.author}}</small>
-                <div class="myBtn">
-                    <button class="btn btn-danger">Delete Quote</button>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let Quote of Quotes'>
+                <div id="card">
+                    <div class="card">
+                        <h4>{{Quote.name}}</h4>
+                        <p>{{Quote.quote}}</p>
+                        <app-quote-details  (isExpired)='deleteQuote($event,i)'></app-quote-details>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
         </div>
     </div>
 </div>
