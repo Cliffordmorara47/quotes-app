@@ -12,16 +12,19 @@
                     <div class="card">
                         <h4>{{Quote.name}}</h4>
                         <p>{{Quote.quote}}</p>
+                        <small>From the books of: {{Quote.author}}</small>
                         <div class="icons">
-                            <a href="#" class="btn btn-info btn-lg">
-                                <span class="glyphicon glyphicon-thumbs-up" (click)="upVote(Quote)"></span> Like
-                            </a>
-                            <a href="#" class="btn btn-info btn-lg">
-                                <span class="glyphicon glyphicon-thumbs-down" (click)="downVote(Quote)"></span> Unlike
-                            </a>
+                            <span class="glyphicon glyphicon-thumbs-up btn btn-info btn-lg"
+                                (click)="upVote(Quote)">like</span>
+                            <span class="glyphicon glyphicon-thumbs-up btn btn-info btn-lg"
+                                (click)="downVote(Quote)">unlike</span>
+                        </div>
+                        <div class="votes">
+                            <span class="pr-5">{{ Quote.upVotes }}</span>
+                            <span class="pr-5">{{ Quote.downVotes }}</span>
                         </div>
                         <div class="myBtn">
-                            <button class="btn btn-danger" (click)='quoteDelete($event, i)'>Delete Quote</button>
+                            <!-- <button class="btn btn-danger" (click)="deleteQuote($event, mIndex)">Delete Quote</button> -->
                         </div>
                         <!--  *ngIf='Quote.showDetails' [Quote]='Quote' -->
                     </div>
@@ -67,7 +70,7 @@
     }
 
     .card small {
-        color: rgb(247, 1, 34);
+        color: rgb(163, 62, 76);
     }
 
     .btn-info {
